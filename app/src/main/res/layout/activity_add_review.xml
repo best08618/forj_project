@@ -44,6 +44,7 @@
         android:isIndicator="false"
         android:numStars="5"
         android:rating="0.0"
+        android:max="5"
         android:stepSize="0.5" />
 
     <View
@@ -65,7 +66,7 @@
         android:layout_height="match_parent"
         android:hint="Review"
         android:gravity="center"
-        />
+        android:background="#ffffff" />
 
 
 </LinearLayout>

@@ -14,11 +14,14 @@ import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.zip.Inflater;
 
 class MainActivityAdapter extends ArrayAdapter<Review> {
+    int numpeople;
     public MainActivityAdapter(Context context, List<Review> reviews) {
         super(context, R.layout.review, reviews);
     }
@@ -50,6 +53,11 @@ public class MainActivity extends AppCompatActivity {
     List<Review> reviews = new ArrayList<>();
     ArrayAdapter<Review> reviewListAdapter;
 
+    RatingBar netizen;
+    RatingBar expert;
+    TextView expert_num;
+    TextView netizen_num;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +66,12 @@ public class MainActivity extends AppCompatActivity {
         reviewListView = (ListView) findViewById(R.id.listView);
         reviewListAdapter = new MainActivityAdapter(this, reviews);
         reviewListView.setAdapter(reviewListAdapter);
+        expert= (RatingBar) findViewById(R.id.expert_ratingbar);
+        expert_num= (TextView) findViewById(R.id.expert_float) ;
+        netizen = (RatingBar) findViewById(R.id.netizen_ratingbar);
+        netizen_num =(TextView)findViewById(R.id.netizen_float_num);
+        expert.setRating((float)3.5);
+        expert_num.setText(String.valueOf((float)3.5));
     }
     public void postreview(View v)
     {
@@ -65,6 +79,11 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(intent, 1);
 
     }
+
+    int numpeople=0;
+    float sum= (float) 0.0;
+    float realfinal=(float) 0.0;
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode, resultCode, data);
@@ -74,15 +93,22 @@ public class MainActivity extends AppCompatActivity {
         {
             if(requestCode==1)
 // InformationInput에서 호출한 경우에만 처리합니다.
-            {
+            { numpeople++;
 // 받아온 이름과 전화번호를 InformationInput 액티비티에 표시합니다.
                 Review review = new Review();
                 review.id = data.getStringExtra("data_name");
                 review.comment =data.getStringExtra("data_review");
                 review.rating = data.getFloatExtra("data_rating", 0);
-                reviews.add(review);
 
+                reviews.add(review);
                 reviewListAdapter.notifyDataSetChanged();
+
+                sum = review.rating + sum;
+                realfinal=(float) sum/ numpeople;
+
+                netizen.setRating(realfinal);
+                netizen_num.setText(String.valueOf(realfinal));
+
             }
         }
     }
