@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.RatingBar;
@@ -73,17 +75,14 @@ public class MainActivity extends AppCompatActivity {
         expert.setRating((float)3.5);
         expert_num.setText(String.valueOf((float)3.5));
     }
-    public void sadcontent(View v)
-    {
-        Intent intent = new Intent(this, sad_content.class);
-        startActivity(intent);
-    }
+
     public void postreview(View v)
     {
         Intent intent = new Intent(this, AddReviewActivity.class);
         startActivityForResult(intent, 1);
 
     }
+
 
     int numpeople=0;
     float sum= (float) 0.0;

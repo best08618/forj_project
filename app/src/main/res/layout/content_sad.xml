@@ -18,28 +18,28 @@
             android:id="@+id/radioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="7dp"
             android:checked="false" />
 
         <EditText
             android:id="@+id/name_field"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="7dp"
             android:layout_weight="1"
-            android:hint="Search"
+            android:hint="SEARCH MOVIE"
             android:inputType="textCapWords" />
 
         <Button
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="7dp"
             android:text="0" />
 
         <Button
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="7dp"
             android:text="0" />
 
 
@@ -57,32 +57,45 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Happy"
-                android:textAllCaps="true" />
-
+                android:textAllCaps="true"
+                android:background="#F57F17"
+                android:textColor="#FFFFFF"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sad"
-                android:textAllCaps="true" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Anger"
-                android:textAllCaps="true" />
+                android:text="Motivated"
+                android:textAllCaps="true"
+                android:background="#F9A825"
+                android:textColor="#FFFFFF"/>
 
             <Button
                 android:id="@+id/button3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Lonely"
-                android:textAllCaps="true" />
+                android:textAllCaps="true"
+                android:background="#FBC02D"
+                android:textColor="#FFFFFF"/>
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Motivated"
-                android:textAllCaps="true" />
+                android:text="Sad"
+                android:textAllCaps="true"
+                android:background="#FDD835"
+                android:textColor="#000000"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Anger"
+                android:textAllCaps="true"
+                android:background="#FFEB3B"
+                android:textColor="#000000"/>
+
+
+
+
 
         </LinearLayout>
     </HorizontalScrollView>

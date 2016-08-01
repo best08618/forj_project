@@ -29,18 +29,29 @@
                 android:scaleType="fitStart"
                 android:src="@drawable/boosanhang" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="28dp"
-                android:onClick="sadcontent"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
                 android:background="@drawable/roundbutton"
-                android:text="+"
-                android:textSize="50sp"
-                android:textColor="@android:color/white"
-                android:layout_alignParentBottom="true" />
+                android:gravity="center_vertical|center_horizontal">
 
+            <CheckBox
+                android:id="@+id/star_icon"
+                android:button="@android:color/transparent"
+                android:background="@drawable/starbutton"
+                android:textSize="0dp"
+                android:textColor="@android:color/white"
+
+                android:text="@null"
+                android:textOn="@null"
+                android:textOff="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            </RelativeLayout>
 
         </RelativeLayout>
 <LinearLayout
@@ -71,7 +82,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="16dp"
             android:layout_marginLeft="8dp"
-            android:textColor="#E65100"
+            android:textColor="#795548"
             android:text="감독 연상호 |출연 공유, 정유미, 마동석| 등급 15세 관람가" />
 
         <TextView
@@ -130,7 +141,8 @@
                     android:numStars="5"
                     android:rating="0.0"
                     android:max="5"
-                    android:stepSize="0.5" />
+                    android:stepSize="0.5"
+                    android:theme="@style/RatingBar"/>
 
                 <TextView
                     android:id="@+id/expert_float"
@@ -166,7 +178,8 @@
                     android:numStars="5"
                     android:rating="0.0"
                     android:max="5"
-                    android:stepSize="0.5" />
+                    android:stepSize="0.5"
+                    android:theme="@style/RatingBar"/>
 
                 <TextView
                     android:id="@+id/netizen_float_num"
@@ -192,6 +205,7 @@
             android:paddingTop="12dp">
 
             <Button
+                android:padding="10dp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -199,14 +213,17 @@
                 android:text="Sharing"
                 android:background="#FFB300"
                 android:textColor="#FFFFFF"
+                android:drawableTop="@android:drawable/ic_menu_share"
                 />
 
             <Button
+                android:padding="10dp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
                 android:text="Posting Review"
+                android:drawableTop="@android:drawable/ic_menu_edit"
                 android:textColor="#FFFFFF"
                 android:onClick="postreview"
                 android:background="#FFB300"/>
@@ -215,9 +232,12 @@
      <TextView
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
+         android:layout_marginTop="10dp"
          android:text="REVIEW"
-         android:textColor="#000000"
+         android:textColor="#FF9800"
          android:layout_marginLeft="13dp"
+         android:textSize="15sp"
+         android:textStyle="bold"
          />
 
     <RelativeLayout
@@ -241,8 +261,9 @@
             android:text="RECOMMEND"
             android:paddingTop="36dp"
             android:textSize="15sp"
-        android:textColor="#000000"
-        android:layout_marginLeft="13dp"/>
+        android:textColor="#795548"
+        android:layout_marginLeft="13dp"
+        android:textStyle="bold"/>
 
         <HorizontalScrollView
             android:layout_width="match_parent"

@@ -13,21 +13,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="back"
-            android:onClick="back"/>
+            android:onClick="back"
+            android:background="#FFB300"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="15dp"/>
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Review"
-            android:textSize="25sp" />
+            android:text="REVIEW"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="submit"
-            android:onClick="submit"/>
+            android:onClick="submit"
+            android:background="#FFB300"
+            android:textColor="#FFFFFF"/>
     </LinearLayout>
 
     <View
@@ -45,7 +52,8 @@
         android:numStars="5"
         android:rating="0.0"
         android:max="5"
-        android:stepSize="0.5" />
+        android:stepSize="0.5"
+        android:theme="@style/RatingBar"/>
 
     <View
         android:layout_width="fill_parent"
@@ -57,16 +65,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:hint="Nickname(ID)"
+        android:hint="YOUR NICKNAME (ID)"
         android:textSize="20sp" />
 
     <EditText
         android:id="@+id/review_text_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:hint="Review"
+        android:hint="Please write your own review."
         android:gravity="center"
-        android:background="#ffffff" />
+        android:background="#ffffff"
+        android:textSize="20sp"/>
 
 
 </LinearLayout>
