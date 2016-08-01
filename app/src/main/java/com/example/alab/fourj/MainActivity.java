@@ -73,6 +73,11 @@ public class MainActivity extends AppCompatActivity {
         expert.setRating((float)3.5);
         expert_num.setText(String.valueOf((float)3.5));
     }
+    public void sadcontent(View v)
+    {
+        Intent intent = new Intent(this, sad_content.class);
+        startActivity(intent);
+    }
     public void postreview(View v)
     {
         Intent intent = new Intent(this, AddReviewActivity.class);
