@@ -14,12 +14,16 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageButton
+            android:id="@+id/expanded_menu_button"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
             android:layout_marginTop="7dp"
-            android:checked="false" />
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#FAFAFA"
+            android:src="@drawable/menu"
+            />
 
         <EditText
             android:id="@+id/name_field"
@@ -30,17 +34,24 @@
             android:hint="SEARCH MOVIE"
             android:inputType="textCapWords" />
 
-        <Button
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
+        <ImageButton
+            android:id="@+id/search_button"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
             android:layout_marginTop="7dp"
-            android:text="0" />
+            android:background="#FAFAFA"
+            android:src="@drawable/search"
+             />
 
-        <Button
+        <ImageButton
+            android:id="@+id/store_button"
             android:layout_width="50dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginRight="5dp"
             android:layout_marginTop="7dp"
-            android:text="0" />
+            android:background="#FAFAFA"
+            android:src="@drawable/shopping_bag"
+            />
 
 
     </LinearLayout>
@@ -116,7 +127,8 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
                     android:layout_weight="1"
                     android:background="@android:color/white"
                     android:orientation="vertical">
@@ -126,7 +138,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="200dp"
                         android:scaleType="fitXY"
-                        android:src="@drawable/findingdory" />
+                        android:src="@drawable/classic" />
 
                     <View
                         android:layout_width="wrap_content"
@@ -135,11 +147,21 @@
 
                     <TextView
                         android:id="@+id/norbit_text"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="start"
-                        android:text="Titanic, XXXX"
-                        android:textSize="24sp" />
+                        android:text="클래식, 2003"
+                        android:textColor="#000000"
+                        android:layout_marginTop="5dp"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+                    <View
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="#FFB300" />
+
                     <RatingBar
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -148,11 +170,10 @@
                         android:layout_gravity="center"
                         style="@style/Base.Widget.AppCompat.RatingBar.Small"
                         android:stepSize="0.5"/>
-
                     <View
                         android:layout_width="wrap_content"
                         android:layout_height="1dp"
-                        android:background="@android:color/darker_gray" />
+                        android:background="#FFB300" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -160,15 +181,22 @@
 
                         <Button
                             android:layout_width="0dp"
+                            android:layout_marginRight="2dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="star" />
+                            android:layout_marginTop="5dp"
+                            android:background="#FFB300"
+                            android:paddingLeft="33dp"
+                            android:drawableStart="@drawable/star_smallicon" />
 
                         <Button
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Reserve" />
+                            android:layout_marginTop="5dp"
+                            android:background="#FFB300"
+                            android:paddingLeft="33dp"
+                            android:drawableStart="@drawable/tv" />
                     </LinearLayout>
 
 
@@ -177,7 +205,9 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
                     android:layout_weight="1"
                     android:orientation="vertical">
 
@@ -186,15 +216,24 @@
                         android:layout_width="wrap_content"
                         android:layout_height="200dp"
                         android:scaleType="fitXY"
-                        android:src="@drawable/findingdory" />
+                        android:src="@drawable/youaremydestiny" />
 
                     <TextView
                         android:id="@+id/norbit1_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="start"
-                        android:text="Titanic, XXXX"
-                        android:textSize="24sp" />
+                        android:text="너는 내운명, 2005"
+                        android:textColor="#000000"
+                        android:layout_marginTop="5dp"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+                    <View
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="#FFB300" />
+
                     <RatingBar
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -203,11 +242,10 @@
                         android:layout_gravity="center"
                         style="@style/Base.Widget.AppCompat.RatingBar.Small"
                         android:stepSize="0.5"/>
-
                     <View
                         android:layout_width="wrap_content"
                         android:layout_height="1dp"
-                        android:background="@android:color/darker_gray" />
+                        android:background="#FFB300" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -215,15 +253,22 @@
 
                         <Button
                             android:layout_width="0dp"
+                            android:layout_marginRight="2dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="star" />
+                            android:layout_marginTop="5dp"
+                            android:background="#FFB300"
+                            android:paddingLeft="33dp"
+                            android:drawableStart="@drawable/star_smallicon" />
 
                         <Button
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Reserve" />
+                            android:layout_marginTop="5dp"
+                            android:background="#FFB300"
+                            android:paddingLeft="33dp"
+                            android:drawableStart="@drawable/tv" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -241,7 +286,8 @@
                      <LinearLayout
                          android:layout_width="0dp"
                          android:layout_height="wrap_content"
-                         android:layout_margin="16dp"
+                         android:layout_marginLeft="16dp"
+                         android:layout_marginTop="16dp"
                          android:layout_weight="1"
                          android:background="@android:color/white"
                          android:orientation="vertical">
@@ -251,7 +297,7 @@
                              android:layout_width="wrap_content"
                              android:layout_height="200dp"
                              android:scaleType="fitXY"
-                             android:src="@drawable/findingdory" />
+                             android:src="@drawable/eraser_inmyhead" />
 
                          <View
                              android:layout_width="wrap_content"
@@ -263,8 +309,17 @@
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
                              android:gravity="start"
-                             android:text="Titanic, XXXX"
-                             android:textSize="24sp" />
+                             android:text="내 머리속의 지우개, 2004"
+                             android:textColor="#000000"
+                             android:layout_marginTop="5dp"
+                             android:textStyle="bold"
+                             android:textSize="20sp" />
+                         <View
+                             android:layout_marginTop="5dp"
+                             android:layout_width="wrap_content"
+                             android:layout_height="1dp"
+                             android:background="#FFB300" />
+
                          <RatingBar
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
@@ -273,27 +328,34 @@
                              android:layout_gravity="center"
                              style="@style/Base.Widget.AppCompat.RatingBar.Small"
                              android:stepSize="0.5"/>
-
                          <View
                              android:layout_width="wrap_content"
                              android:layout_height="1dp"
-                             android:background="@android:color/darker_gray" />
+                             android:background="#FFB300" />
 
                          <LinearLayout
                              android:layout_width="match_parent"
-                             android:layout_height="wrap_content">
+                             android:layout_height="wrap_content"
+                             >
+
+                             <Button
+                                 android:layout_width="0dp"
+                                 android:layout_marginRight="2dp"
+                                 android:layout_height="wrap_content"
+                                 android:layout_weight="1"
+                                 android:layout_marginTop="5dp"
+                                 android:background="#FFB300"
+                                 android:paddingLeft="33dp"
+                                 android:drawableStart="@drawable/star_smallicon" />
 
                              <Button
                                  android:layout_width="0dp"
                                  android:layout_height="wrap_content"
                                  android:layout_weight="1"
-                                 android:text="star" />
-
-                             <Button
-                                 android:layout_width="0dp"
-                                 android:layout_height="wrap_content"
-                                 android:layout_weight="1"
-                                 android:text="Reserve" />
+                                 android:layout_marginTop="5dp"
+                                 android:background="#FFB300"
+                                 android:paddingLeft="33dp"
+                                 android:drawableStart="@drawable/tv" />
                          </LinearLayout>
 
 
@@ -311,15 +373,24 @@
                              android:layout_width="wrap_content"
                              android:layout_height="200dp"
                              android:scaleType="fitXY"
-                             android:src="@drawable/findingdory" />
+                             android:src="@drawable/dont_across_river" />
 
                          <TextView
                              android:id="@+id/norbit2_text"
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
                              android:gravity="start"
-                             android:text="Titanic, XXXX"
-                             android:textSize="24sp" />
+                             android:text="님아, 그강을 건너지 마오, 2014"
+                             android:textColor="#000000"
+                             android:layout_marginTop="5dp"
+                             android:textStyle="bold"
+                             android:textSize="20sp" />
+                         <View
+                             android:layout_marginTop="5dp"
+                             android:layout_width="wrap_content"
+                             android:layout_height="1dp"
+                             android:background="#FFB300" />
+
                          <RatingBar
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
@@ -328,11 +399,10 @@
                              android:layout_gravity="center"
                              style="@style/Base.Widget.AppCompat.RatingBar.Small"
                              android:stepSize="0.5"/>
-
                          <View
                              android:layout_width="wrap_content"
                              android:layout_height="1dp"
-                             android:background="@android:color/darker_gray" />
+                             android:background="#FFB300" />
 
                          <LinearLayout
                              android:layout_width="match_parent"
@@ -342,13 +412,20 @@
                                  android:layout_width="0dp"
                                  android:layout_height="wrap_content"
                                  android:layout_weight="1"
-                                 android:text="star" />
+                                 android:layout_marginTop="5dp"
+                                 android:background="#FFB300"
+                                 android:paddingLeft="33dp"
+                                 android:layout_marginRight="2dp"
+                                 android:drawableStart="@drawable/star_smallicon" />
 
                              <Button
                                  android:layout_width="0dp"
                                  android:layout_height="wrap_content"
                                  android:layout_weight="1"
-                                 android:text="Reserve" />
+                                 android:layout_marginTop="5dp"
+                                 android:background="#FFB300"
+                                 android:paddingLeft="33dp"
+                                 android:drawableStart="@drawable/tv" />
                          </LinearLayout>
 
                      </LinearLayout>
@@ -368,7 +445,8 @@
                      <LinearLayout
                          android:layout_width="0dp"
                          android:layout_height="wrap_content"
-                         android:layout_margin="16dp"
+                         android:layout_marginLeft="16dp"
+                         android:layout_marginTop="16dp"
                          android:layout_weight="1"
                          android:background="@android:color/white"
                          android:orientation="vertical">
@@ -378,7 +456,7 @@
                              android:layout_width="wrap_content"
                              android:layout_height="200dp"
                              android:scaleType="fitXY"
-                             android:src="@drawable/findingdory" />
+                             android:src="@drawable/mebeforeyou" />
 
                          <View
                              android:layout_width="wrap_content"
@@ -390,8 +468,17 @@
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
                              android:gravity="start"
-                             android:text="Titanic, XXXX"
-                             android:textSize="24sp" />
+                             android:text="Me Before You, 2016"
+                             android:textColor="#000000"
+                             android:layout_marginTop="5dp"
+                             android:textStyle="bold"
+                             android:textSize="20sp" />
+                         <View
+                             android:layout_marginTop="5dp"
+                             android:layout_width="wrap_content"
+                             android:layout_height="1dp"
+                             android:background="#FFB300" />
+
                          <RatingBar
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
@@ -400,11 +487,10 @@
                              android:layout_gravity="center"
                              style="@style/Base.Widget.AppCompat.RatingBar.Small"
                              android:stepSize="0.5"/>
-
                          <View
                              android:layout_width="wrap_content"
                              android:layout_height="1dp"
-                             android:background="@android:color/darker_gray" />
+                             android:background="#FFB300" />
 
                          <LinearLayout
                              android:layout_width="match_parent"
@@ -414,13 +500,20 @@
                                  android:layout_width="0dp"
                                  android:layout_height="wrap_content"
                                  android:layout_weight="1"
-                                 android:text="star" />
+                                 android:layout_marginTop="5dp"
+                                 android:layout_marginRight="2dp"
+                                 android:background="#FFB300"
+                                 android:paddingLeft="33dp"
+                                 android:drawableStart="@drawable/star_smallicon" />
 
                              <Button
                                  android:layout_width="0dp"
                                  android:layout_height="wrap_content"
                                  android:layout_weight="1"
-                                 android:text="Reserve" />
+                                 android:layout_marginTop="5dp"
+                                 android:background="#FFB300"
+                                 android:paddingLeft="33dp"
+                                 android:drawableStart="@drawable/tv" />
                          </LinearLayout>
 
 
@@ -438,20 +531,24 @@
                              android:layout_width="wrap_content"
                              android:layout_height="200dp"
                              android:scaleType="fitXY"
-                             android:src="@drawable/findingdory" />
+                             android:src="@drawable/hello_heizle" />
 
                          <TextView
                              android:id="@+id/norbit5_text"
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
                              android:gravity="start"
-                             android:text="Titanic, XXXX"
-                             android:textSize="24sp" />
-
+                             android:text="The Fault in Our Stars, 2014"
+                             android:textColor="#000000"
+                             android:layout_marginTop="5dp"
+                             android:textStyle="bold"
+                             android:textSize="20sp" />
                          <View
+                             android:layout_marginTop="5dp"
                              android:layout_width="wrap_content"
                              android:layout_height="1dp"
-                             android:background="@android:color/darker_gray" />
+                             android:background="#FFB300" />
+
                          <RatingBar
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
@@ -460,6 +557,10 @@
                              android:layout_gravity="center"
                              style="@style/Base.Widget.AppCompat.RatingBar.Small"
                              android:stepSize="0.5"/>
+                         <View
+                             android:layout_width="wrap_content"
+                             android:layout_height="1dp"
+                             android:background="#FFB300" />
 
                          <LinearLayout
                              android:layout_width="match_parent"
@@ -469,13 +570,20 @@
                                  android:layout_width="0dp"
                                  android:layout_height="wrap_content"
                                  android:layout_weight="1"
-                                 android:text="star" />
+                                 android:layout_marginTop="5dp"
+                                 android:background="#FFB300"
+                                 android:paddingLeft="33dp"
+                                 android:layout_marginRight="2dp"
+                                 android:drawableStart="@drawable/star_smallicon" />
 
                              <Button
                                  android:layout_width="0dp"
                                  android:layout_height="wrap_content"
                                  android:layout_weight="1"
-                                 android:text="Reserve" />
+                                 android:layout_marginTop="5dp"
+                                 android:background="#FFB300"
+                                 android:paddingLeft="33dp"
+                                 android:drawableStart="@drawable/tv" />
                          </LinearLayout>
 
                      </LinearLayout>
