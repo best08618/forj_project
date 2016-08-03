@@ -78,8 +78,9 @@
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="20dp"
                 android:text="This month"
+                android:fontFamily="monospace"
                 android:textStyle="bold"
-                android:textColor="#FA7D32"
+                android:textColor="#795548"
                 android:textAllCaps="true"
                 android:textSize="20sp" />
         </LinearLayout>
@@ -91,14 +92,16 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginRight="3dp"
+                android:layout_marginLeft="3dp">
 
                 <ImageView
                     android:layout_width="219dp"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="5dp"
                     android:layout_marginRight="5dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="5dp"
                     android:scaleType="fitStart"
                     android:src="@drawable/busan"
                     android:onClick="busan"/>
@@ -106,9 +109,9 @@
                 <ImageView
                     android:layout_width="228dp"
                     android:layout_height="150dp"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="5dp"
                     android:layout_marginRight="5dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="5dp"
                     android:scaleType="fitStart"
                     android:src="@drawable/now_you_see_me"
                     android:onClick="now"/>
@@ -116,9 +119,9 @@
                 <ImageView
                     android:layout_width="271dp"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="5dp"
                     android:layout_marginRight="5dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="5dp"
                     android:scaleType="fitStart"
                     android:src="@drawable/finding_dorry"
                     android:onClick="dorry"/>
@@ -126,9 +129,9 @@
                 <ImageView
                     android:layout_width="232dp"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="5dp"
                     android:layout_marginRight="5dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="5dp"
                     android:scaleType="fitStart"
                     android:src="@drawable/seondal"
                     android:onClick="bongi"/>
@@ -136,9 +139,9 @@
                 <ImageView
                     android:layout_width="196dp"
                     android:layout_height="150dp"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="5dp"
                     android:layout_marginRight="5dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="5dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/monster_watch"
                     android:onClick="watch"/>
@@ -146,9 +149,9 @@
                 <ImageView
                     android:layout_width="394dp"
                     android:layout_height="150dp"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="5dp"
                     android:layout_marginRight="5dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="5dp"
                     android:layout_weight="2.18"
                     android:scaleType="fitStart"
                     android:src="@drawable/ice_age"
@@ -159,8 +162,9 @@
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -168,67 +172,81 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:onClick="top">
+                android:onClick="top"
+                android:background="#FF882F"
+                android:layout_margin="2dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:layout_margin="20dp"
-                    android:src="@drawable/hot_movie" />
+                    android:src="@drawable/trophy"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="TOP MOVIES"
+                    android:text="RANK"
                     android:textStyle="bold"
-                    android:textColor="#FA7D32"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#FAFAFA"
                     android:textSize="20sp"
                     android:layout_gravity="center"/>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
+                android:layout_margin="2dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:onClick="hot">
+                android:onClick="hot"
+                android:background="#FF882F">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:layout_margin="20dp"
-                    android:src="@drawable/top_movie" />
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/top"
+                    android:layout_gravity="center"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:text="HOT PICK"
+                    android:text="HOT"
+                    android:layout_marginBottom="10dp"
                     android:textStyle="bold"
-                    android:textColor="#FA7D32"
+                    android:textColor="#FAFAFA"
                     android:textSize="20sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:onClick="nearby">
+                android:onClick="nearby"
+                android:background="#FF882F">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:layout_margin="20dp"
+                    android:layout_marginTop="10dp"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
                     android:src="@drawable/location" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Nearby"
+                    android:text="THEATER"
+                    android:textStyle="bold"
+                    android:textColor="#FAFAFA"
+                    android:layout_marginBottom="10dp"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -236,21 +254,24 @@
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:onClick="mood">
 
             <LinearLayout
                 android:layout_width="0dp"
+                android:layout_margin="2dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:background="#FFA52F">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:layout_margin="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
                     android:src="@drawable/mood" />
 
                 <TextView
@@ -258,7 +279,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:text="Mood"
+                    android:text="MOOD"
+                    android:layout_marginBottom="10dp"
+                    android:textStyle="bold"
+                    android:textColor="#FAFAFA"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -267,21 +291,26 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:onClick="weather">
+                android:layout_margin="2dp"
+                android:background="#FFA52F">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:layout_margin="20dp"
+                    android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:src="@drawable/weather_1" />
+                    android:layout_gravity="center"
+                    android:src="@drawable/weather" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:text="Weather"
+                    android:text="WEATHER"
+                    android:textStyle="bold"
+                    android:textColor="#FAFAFA"
+                    android:layout_marginBottom="10dp"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -291,12 +320,15 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:onClick="genre">
+                android:onClick="genre"
+                android:layout_margin="2dp"
+                android:background="#FFA52F">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:layout_margin="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
                     android:layout_weight="1"
                     android:src="@drawable/genre" />
 
@@ -304,8 +336,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Genre"
-                    android:textSize="20sp" />
+                    android:text="GENRE"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#FAFAFA"
+                    android:textSize="20sp"
+                    />
             </LinearLayout>
 
         </LinearLayout>
@@ -318,9 +354,11 @@
                 android:id="@+id/weather_image"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/weather"
+                android:src="@drawable/weather_screenshot"
                 android:onClick="today_weather"/>
 
             <TextView
@@ -329,10 +367,12 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="190dp"
-                android:text="Good movies for \n rainy day"
-                android:textColor="#000000"
+                android:text="GOOD MOVIES FOR \nTODAY..."
+                android:textStyle="italic"
+                android:fontFamily="sans-serif"
+                android:textColor="#"
                 android:textSize="20sp" />
 
         </RelativeLayout>
@@ -341,7 +381,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="28dp">
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp">
 
             <ImageView
                 android:layout_width="219dp"
@@ -385,6 +427,9 @@
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="20dp"
                 android:text="Coming Soon"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:textColor="#795548"
                 android:textAllCaps="true"
                 android:textSize="20sp" />
         </LinearLayout>
@@ -396,60 +441,70 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginRight="3dp"
+                android:layout_marginLeft="3dp">
 
                 <ImageView
                     android:layout_width="219dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
                     android:scaleType="fitStart"
-                    android:src="@drawable/busan" />
+                    android:src="@drawable/galaxy"
+                    android:onClick="busan"/>
 
                 <ImageView
                     android:layout_width="228dp"
                     android:layout_height="150dp"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
                     android:scaleType="fitStart"
-                    android:src="@drawable/now_you_see_me" />
+                    android:src="@drawable/mypet"
+                    android:onClick="now"/>
 
                 <ImageView
                     android:layout_width="271dp"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
                     android:scaleType="fitStart"
-                    android:src="@drawable/finding_dorry" />
+                    android:src="@drawable/tunel"
+                    android:onClick="dorry"/>
 
                 <ImageView
                     android:layout_width="232dp"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
                     android:scaleType="fitStart"
-                    android:src="@drawable/seondal" />
+                    android:src="@drawable/present"
+                    android:onClick="bongi"/>
 
                 <ImageView
                     android:layout_width="196dp"
                     android:layout_height="150dp"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/monster_watch" />
+                    android:src="@drawable/seoulstation"
+                    android:onClick="watch"/>
 
                 <ImageView
                     android:layout_width="394dp"
                     android:layout_height="150dp"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
                     android:layout_weight="2.18"
                     android:scaleType="fitStart"
-                    android:src="@drawable/ice_age" />
+                    android:src="@drawable/robin"
+                    android:onClick="ice"/>
 
             </LinearLayout>
         </HorizontalScrollView>
